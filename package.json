@@ -6,8 +6,10 @@
     "caliper": "bin/caliper"
   },
   "scripts": {
-    "prepublish": "grunt coffee"
+      "prepublish": "grunt coffee",
+      "start": "node lib/app.js"
   },
+  "main": "lib/app.js",
   "dependencies": {
     "body-parser": "1.14.1",
     "decompress-zip": "0.0.4",
