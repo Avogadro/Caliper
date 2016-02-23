@@ -50,8 +50,8 @@ webhook = new WebHook
 
 db = new Database
 db.on 'load', ->
-  port = process.env.MINI_BREAKPAD_SERVER_PORT ? 80
-  host = process.env.MINI_BREAKPAD_SERVER_HOSTNAME ? null
+  port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+  host = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
   if host == null
     app.listen port
